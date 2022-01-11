@@ -14,3 +14,19 @@ Consigli del giorno:
 4. torniamo a scrivere in italiano
 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 */
+
+
+const userNumber = Math.floor(Math.random() * 6) + 1;
+const computerNumber = Math.floor(Math.random() * 6) + 1;
+
+console.log(`Lancio dei dadi...`);
+console.log(`All'utente è uscito il numero ${userNumber}`);
+console.log(`Al computer è uscito il numero ${computerNumber}`);
+
+if (userNumber > computerNumber) {
+    console.log("Il vincitore è l'Utente")    
+} else if (computerNumber > userNumber) {
+    console.log("Il vincitore è il Computer")    
+} else {
+    console.log("La partita è finita in pareggio")
+}
