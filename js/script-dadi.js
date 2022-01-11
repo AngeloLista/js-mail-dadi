@@ -23,10 +23,21 @@ console.log(`Lancio dei dadi...`);
 console.log(`All'utente è uscito il numero ${userNumber}`);
 console.log(`Al computer è uscito il numero ${computerNumber}`);
 
+let message = ''
+
 if (userNumber > computerNumber) {
-    console.log("Il vincitore è l'Utente")    
+    console.log("Il vincitore è l'Utente")   
+    message = "Il vincitore è l'Utente." 
 } else if (computerNumber > userNumber) {
-    console.log("Il vincitore è il Computer")    
+    console.log("Il vincitore è il Computer") 
+    message = "Il vincitore è il Computer."   
 } else {
     console.log("La partita è finita in pareggio")
+    message = "La partita è finita in pareggio."
 }
+
+
+document.getElementById("user").innerHTML = `All'utente è uscito il numero ${userNumber}.`;
+document.getElementById("computer").innerHTML = `Al computer è uscito il numero ${computerNumber}.`;
+document.getElementById("winner").innerHTML = message;
+
